@@ -12,7 +12,7 @@ let callcount = 0,
 
 // #inputSection please change all input variables here
 /*-----------------------------------------------*/
-let directoryPath = "./dr"; // chnage directory path
+let directoryPath = "./dir"; // chnage directory path
 let tokenUrl = "?allowlogin=1&token=dbf0226b-121a-4840-a4fc-b6eb75cb72f6"; // token url for login
 let showEachFileDetails = false; // show/hide each file link details
 /*-----------------------------------------------*/
@@ -38,7 +38,7 @@ const getAllLinksStatus = links => {
   try {
     Promise.all(
       links.map(url => {
-        linkCheck(url, function(err, res) {
+        linkCheck(url.split("-----")[1], function(err, res) {
           executedLinks++;
           bar1.update(executedLinks);
 
@@ -87,7 +87,7 @@ try {
         ...links.map(e => {
           if (!e.startsWith("http"))
             e = "https://docs.loginradius.com" + e + tokenUrl;
-          return e;
+          return filePath + "-----" + e;
         })
       ];
     });
