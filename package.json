@@ -5,24 +5,14 @@
   "main": "linkchecker.js",
   "dependencies": {
     "async": "^3.1.0",
-    "check-broken-links": "^2.0.4",
-    "check-links": "^1.1.8",
     "cli-progress": "^3.5.0",
     "link-check": "^4.4.7",
-    "markdown-link": "^0.1.1",
-    "markdown-link-check": "^3.8.0",
-    "markdown-link-extractor": "^1.2.2",
-    "markdown-to-html": "^0.0.13",
-    "markdownlint": "^0.18.0",
-    "node-fetch": "^2.6.0",
-    "parse-markdown-links": "^1.0.4",
-    "remark-validate-links": "^9.1.0",
-    "request": "^2.88.0"
+    "parse-markdown-links": "^1.0.4"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-	"start": "node linkchecker.js"
+    "start": "node linkchecker.js"
   },
   "author": "Abhimanyu Singh Rathore",
   "license": "ISC"
