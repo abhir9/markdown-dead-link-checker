@@ -77,7 +77,13 @@ try {
     console.debug("Total Files : ", filePaths.length);
     filePaths.forEach(filePath => {
       const fileContents = fs.readFileSync(filePath, "utf8");
-      let links = parse(fileContents.replace(/ (.*?)\n|\t/g, ""));
+      let links = [];
+      try {
+        links = parse(fileContents.replace(/ (.*?)\n|\t/g, ""));
+      } catch (e) {
+        console.debug("Error found in this file " + filePath);
+        console.debug(e.message);
+      }
       if (showEachFileDetails) {
         console.debug("File Name :", filePath);
         console.debug("Total Links Found :", links.length);
