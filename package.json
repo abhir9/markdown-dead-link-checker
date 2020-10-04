@@ -4,9 +4,9 @@
   "description": "markdown file link checker with single and multiple files",
   "main": "linkchecker.js",
   "dependencies": {
-    "async": "^3.1.0",
-    "cli-progress": "^3.5.0",
-    "link-check": "^4.4.7",
+    "async": "^3.2.0",
+    "cli-progress": "^3.8.2",
+    "link-check": "^4.5.1",
     "parse-markdown-links": "^1.0.4"
   },
   "devDependencies": {},
